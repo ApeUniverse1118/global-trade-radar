@@ -325,3 +325,8 @@ tbody tr:nth-child(even) td{background:#f8fafc;}
   .qr-mini{gap:18px;}
   .qr-mini .item img{width:104px;}
 }
+
+
+/* Logo（SVG 品牌标） */
+.brand img.logo{height:30px;width:30px;display:block;flex:none;}
+.footer-logo{height:18px;width:18px;vertical-align:-4px;margin-right:6px;flex:none;}
