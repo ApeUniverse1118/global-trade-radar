@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>全球贸易雷达 · 网站信息架构图（项目文档）</title>
+<style>
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{font-family:"PingFang SC","Microsoft YaHei","Segoe UI",Arial,sans-serif;background:#f6f8fa;color:#1c2b3a;line-height:1.6;padding:32px 16px 60px;}
+  .wrap{max-width:1080px;margin:0 auto;}
+  h1{font-size:24px;color:#0d1b2a;text-align:center;letter-spacing:1px;}
+  .sub{text-align:center;color:#5b6b7d;font-size:13px;margin:8px 0 26px;}
+  .legend{display:flex;gap:18px;justify-content:center;flex-wrap:wrap;font-size:12.5px;color:#5b6b7d;margin-bottom:26px;}
+  .legend span{display:inline-flex;align-items:center;gap:6px;}
+  .dot{width:12px;height:12px;border-radius:3px;display:inline-block;}
+  .d-input{background:#e8f1f7;border:1px solid #3f7fb0;}
+  .d-nav{background:#0d1b2a;}
+  .d-page{background:#fff;border:1px solid #2c5f8a;}
+  .d-asset{background:#e7f4ee;border:1px solid #1e7a4f;}
+  .diagram{background:#fff;border:1px solid #e3e8ee;border-radius:14px;padding:28px 20px;box-shadow:0 8px 24px rgba(13,27,42,.06);overflow-x:auto;}
+  svg{width:100%;min-width:900px;height:auto;display:block;}
+  text{font-family:"PingFang SC","Microsoft YaHei","Segoe UI",Arial,sans-serif;}
+  .note{font-size:12.5px;color:#5b6b7d;margin-top:14px;text-align:center;}
+  .card-title{font-size:13px;font-weight:600;fill:#0d1b2a;}
+  .card-sub{font-size:10.5px;fill:#5b6b7d;}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>🌍 全球贸易雷达 · 网站信息架构图</h1>
+  <p class="sub">项目文档（非部署页面）· 生成于 2026-09-15 · 说明网站结构、内容流与自动更新机制</p>
+  <div class="legend">
+    <span><i class="dot d-input"></i>输入源（原始日报）</span>
+    <span><i class="dot d-nav"></i>站点栏目/枢纽页</span>
+    <span><i class="dot d-page"></i>内容页面</span>
+    <span><i class="dot d-asset"></i>资源与配套</span>
+  </div>
+
+  <div class="diagram">
+  <svg viewBox="0 0 1040 860" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="全球贸易雷达网站信息架构图">
+    <!-- 连接线 -->
+    <g stroke="#9db8cf" stroke-width="1.4" fill="none">
+      <path d="M520,70 L520,108"/>
+      <path d="M520,140 L520,170"/>
+      <!-- 首页到栏目 -->
+      <path d="M520,206 L150,252"/><path d="M520,206 L360,252"/><path d="M520,206 L520,252"/>
+      <path d="M520,206 L680,252"/><path d="M520,206 L890,252"/>
+      <!-- 栏目到页面 -->
+      <path d="M150,284 L90,336"/><path d="M150,284 L150,336"/><path d="M150,284 L210,336"/>
+      <path d="M360,284 L300,336"/><path d="M360,284 L360,336"/><path d="M360,284 L420,336"/>
+      <path d="M520,284 L470,356"/><path d="M520,284 L505,356"/><path d="M520,284 L540,356"/><path d="M520,284 L575,356"/><path d="M520,284 L610,356"/><path d="M520,284 L645,356"/>
+      <path d="M680,284 L655,356"/><path d="M680,284 L690,356"/><path d="M680,284 L725,356"/><path d="M680,284 L760,356"/><path d="M680,284 L795,356"/>
+      <path d="M890,284 L870,336"/><path d="M890,284 L930,336"/>
+      <!-- 资产 -->
+      <path d="M520,640 L520,672" stroke-dasharray="5,4"/>
+      <path d="M230,700 L230,730"/><path d="M400,700 L400,730"/><path d="M570,700 L570,730"/><path d="M740,700 L740,730"/><path d="M900,700 L900,730"/>
+      <!-- 自动更新 -->
+      <path d="M520,764 L520,790"/>
+    </g>
+
+    <!-- 根 -->
+    <rect x="360" y="14" width="320" height="56" rx="12" fill="#0d1b2a"/>
+    <text x="520" y="38" text-anchor="middle" fill="#fff" font-size="18" font-weight="700">全球贸易雷达 Global Trade Radar</text>
+    <text x="520" y="58" text-anchor="middle" fill="#aec7dd" font-size="11.5">AI 驱动的中国企业全球市场情报平台 · 纯静态 · GitHub Pages 直接运行</text>
+
+    <!-- 输入源 -->
+    <rect x="380" y="112" width="280" height="30" rx="8" fill="#e8f1f7" stroke="#3f7fb0"/>
+    <text x="520" y="132" text-anchor="middle" fill="#1f3a5f" font-size="12.5" font-weight="600">输入源：历史日报 HTML × 2（2026-09-13 / 09-14）</text>
+
+    <!-- 首页 -->
+    <rect x="410" y="172" width="220" height="36" rx="9" fill="#0d1b2a"/>
+    <text x="520" y="195" text-anchor="middle" fill="#fff" font-size="13" font-weight="700">🏠 index.html 首页</text>
+
+    <!-- 六大栏目 -->
+    <rect x="70" y="254" width="160" height="32" rx="8" fill="#16273d"/>
+    <text x="150" y="275" text-anchor="middle" fill="#fff" font-size="12.5" font-weight="600">📰 每日雷达</text>
+    <rect x="280" y="254" width="160" height="32" rx="8" fill="#16273d"/>
+    <text x="360" y="275" text-anchor="middle" fill="#fff" font-size="12.5" font-weight="600">🗺️ 市场分析</text>
+    <rect x="440" y="254" width="160" height="32" rx="8" fill="#16273d"/>
+    <text x="520" y="275" text-anchor="middle" fill="#fff" font-size="12.5" font-weight="600">🏭 行业机会</text>
+    <rect x="600" y="254" width="160" height="32" rx="8" fill="#16273d"/>
+    <text x="680" y="275" text-anchor="middle" fill="#fff" font-size="12.5" font-weight="600">📚 出海知识库</text>
+    <rect x="810" y="254" width="160" height="32" rx="8" fill="#16273d"/>
+    <text x="890" y="275" text-anchor="middle" fill="#fff" font-size="12.5" font-weight="600">🎙️ 关于Jason</text>
+
+    <!-- 页面卡片 -->
+    <!-- 每日雷达 -->
+    <rect x="30" y="338" width="120" height="58" rx="9" fill="#fff" stroke="#2c5f8a"/>
+    <text x="90" y="360" text-anchor="middle" class="card-title">daily/index</text>
+    <text x="90" y="378" text-anchor="middle" class="card-sub">日报归档页</text>
+    <rect x="150" y="338" width="120" height="58" rx="9" fill="#fff" stroke="#2c5f8a"/>
+    <text x="210" y="360" text-anchor="middle" class="card-title">2026-09-14</text>
+    <text x="210" y="378" text-anchor="middle" class="card-sub">第2期 · 最新</text>
+    <rect x="150" y="402" width="120" height="58" rx="9" fill="#fff" stroke="#2c5f8a"/>
+    <text x="210" y="424" text-anchor="middle" class="card-title">2026-09-13</text>
+    <text x="210" y="442" text-anchor="middle" class="card-sub">第1期</text>
+
+    <!-- 市场分析 -->
+    <rect x="240" y="338" width="120" height="58" rx="9" fill="#fff" stroke="#2c5f8a"/>
+    <text x="300" y="360" text-anchor="middle" class="card-title">🇬🇧 uk.html</text>
+    <text x="300" y="378" text-anchor="middle" class="card-sub">英国市场</text>
+    <rect x="300" y="402" width="120" height="58" rx="9" fill="#fff" stroke="#2c5f8a"/>
+    <text x="360" y="424" text-anchor="middle" class="card-title">🇪🇺 eu.html</text>
+    <text x="360" y="442" text-anchor="middle" class="card-sub">欧盟市场</text>
+    <rect x="360" y="466" width="120" height="58" rx="9" fill="#fff" stroke="#2c5f8a"/>
+    <text x="420" y="488" text-anchor="middle" class="card-title">🇺🇸 usa.html</text>
+    <text x="420" y="506" text-anchor="middle" class="card-sub">美国市场</text>
+
+    <!-- 行业机会 6 -->
+    <rect x="440" y="358" width="78" height="52" rx="8" fill="#fff" stroke="#2c5f8a"/>
+    <text x="479" y="378" text-anchor="middle" class="card-title">index</text><text x="479" y="395" text-anchor="middle" class="card-sub">行业索引</text>
+    <rect x="482" y="358" width="78" height="52" rx="8" fill="#fff" stroke="#2c5f8a"/>
+    <text x="521" y="378" text-anchor="middle" class="card-title">appliance</text><text x="521" y="395" text-anchor="middle" class="card-sub">家电</text>
+    <rect x="524" y="358" width="78" height="52" rx="8" fill="#fff" stroke="#2c5f8a"/>
+    <text x="563" y="378" text-anchor="middle" class="card-title">outdoor</text><text x="563" y="395" text-anchor="middle" class="card-sub">户外</text>
+    <rect x="566" y="358" width="78" height="52" rx="8" fill="#fff" stroke="#2c5f8a"/>
+    <text x="605" y="378" text-anchor="middle" class="card-title">automotive</text><text x="605" y="395" text-anchor="middle" class="card-sub">汽车用品</text>
+    <rect x="608" y="358" width="78" height="52" rx="8" fill="#fff" stroke="#2c5f8a"/>
+    <text x="647" y="378" text-anchor="middle" class="card-title">consumer</text><text x="647" y="395" text-anchor="middle" class="card-sub">消费品</text>
+    <rect x="470" y="418" width="78" height="52" rx="8" fill="#fff" stroke="#2c5f8a"/>
+    <text x="509" y="438" text-anchor="middle" class="card-title">ecommerce</text><text x="509" y="455" text-anchor="middle" class="card-sub">跨境电商</text>
+    <rect x="560" y="418" width="78" height="52" rx="8" fill="#fff" stroke="#2c5f8a"/>
+    <text x="599" y="438" text-anchor="middle" class="card-title">logistics</text><text x="599" y="455" text-anchor="middle" class="card-sub">物流履约</text>
+
+    <!-- 知识库 5 -->
+    <rect x="630" y="358" width="88" height="52" rx="8" fill="#fff" stroke="#2c5f8a"/>
+    <text x="674" y="378" text-anchor="middle" class="card-title">index</text><text x="674" y="395" text-anchor="middle" class="card-sub">知识库索引</text>
+    <rect x="660" y="418" width="88" height="52" rx="8" fill="#fff" stroke="#2c5f8a"/>
+    <text x="704" y="438" text-anchor="middle" class="card-title">trade-policy</text><text x="704" y="455" text-anchor="middle" class="card-sub">贸易政策</text>
+    <rect x="752" y="418" width="88" height="52" rx="8" fill="#fff" stroke="#2c5f8a"/>
+    <text x="796" y="438" text-anchor="middle" class="card-title">consumer-trends</text><text x="796" y="455" text-anchor="middle" class="card-sub">消费趋势</text>
+    <rect x="726" y="478" width="88" height="52" rx="8" fill="#fff" stroke="#2c5f8a"/>
+    <text x="770" y="498" text-anchor="middle" class="card-title">compliance</text><text x="770" y="515" text-anchor="middle" class="card-sub">出海合规</text>
+    <rect x="818" y="478" width="88" height="52" rx="8" fill="#fff" stroke="#2c5f8a"/>
+    <text x="862" y="498" text-anchor="middle" class="card-title">culture</text><text x="862" y="515" text-anchor="middle" class="card-sub">消费文化</text>
+
+    <!-- 关于 -->
+    <rect x="830" y="338" width="120" height="58" rx="9" fill="#fff" stroke="#2c5f8a"/>
+    <text x="890" y="360" text-anchor="middle" class="card-title">about/jason</text>
+    <text x="890" y="378" text-anchor="middle" class="card-sub">主理人 · 个人IP</text>
+
+    <!-- 资产条 -->
+    <rect x="120" y="674" width="220" height="28" rx="7" fill="#e7f4ee" stroke="#1e7a4f"/>
+    <text x="230" y="693" text-anchor="middle" fill="#14532d" font-size="12" font-weight="600">assets/ css · js · images</text>
+    <rect x="290" y="674" width="220" height="28" rx="7" fill="#e7f4ee" stroke="#1e7a4f"/>
+    <text x="400" y="693" text-anchor="middle" fill="#14532d" font-size="12" font-weight="600">sitemap.xml · robots.txt</text>
+    <rect x="460" y="674" width="220" height="28" rx="7" fill="#e7f4ee" stroke="#1e7a4f"/>
+    <text x="570" y="693" text-anchor="middle" fill="#14532d" font-size="12" font-weight="600">README.md · .gitignore</text>
+    <rect x="630" y="674" width="220" height="28" rx="7" fill="#e7f4ee" stroke="#1e7a4f"/>
+    <text x="740" y="693" text-anchor="middle" fill="#14532d" font-size="12" font-weight="600">og-banner.png（品牌/社交图）</text>
+    <rect x="800" y="674" width="200" height="28" rx="7" fill="#e7f4ee" stroke="#1e7a4f"/>
+    <text x="900" y="693" text-anchor="middle" fill="#14532d" font-size="12" font-weight="600">零外部依赖 · 全相对路径</text>
+
+    <!-- 自动更新 -->
+    <rect x="300" y="732" width="440" height="34" rx="9" fill="#0d1b2a"/>
+    <text x="520" y="754" text-anchor="middle" fill="#fff" font-size="12.5" font-weight="600">自动更新机制：新增 daily/YYYY-MM-DD.html → 更新首页列表 + 归档页 + sitemap + 搜索索引（4 处，不动核心代码）</text>
+  </svg>
+  </div>
+
+  <p class="note">统计口径：共 20 个 HTML 页面（1 首页 + 3 索引/枢纽页 + 16 内容页）+ 4 个配套文件（sitemap/robots/README/.gitignore）+ 3 个资源文件（css/js/images）= 27 个站点文件；全部页面经程序化校验：0 错误 0 警告，无 404 资源、无绝对路径、sitemap 全覆盖。</p>
+</div>
+</body>
+</html>

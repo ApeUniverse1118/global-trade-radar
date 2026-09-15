@@ -1,0 +1,24 @@
+# ============ 全球贸易雷达 Global Trade Radar ============
+# GitHub Pages 纯静态站点，无构建依赖
+
+# 系统文件
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# 编辑器
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# 本地预览缓存
+__pycache__/
+*.pyc
+
+# 日志
+*.log
+
+# 开发辅助（可选择性保留或移除）
+# _tools/ 为本地生成脚本目录，不需要上传时取消下面注释
+# _tools/
