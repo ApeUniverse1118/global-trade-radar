@@ -28,7 +28,7 @@
     ["出海合规清单｜全球贸易雷达", "合规 IOR VAT REACH GPSR UKCA 生态税", "knowledge/compliance.html", "IOR核查、VAT/IOSS、REACH、UKCA、GPSR与知识产权合规。"],
     ["欧美消费文化洞察｜全球贸易雷达", "文化 英国 欧盟 美国 消费心理", "knowledge/culture.html", "英国排队文化、欧盟环保身份、美国精明中产与四国性格。"],
     ["出海知识库索引｜全球贸易雷达", "知识库 政策 趋势 合规 文化", "knowledge/index.html", "出海知识库：政策、趋势、合规、文化四大主题。"],
-    ["关于Jason｜全球贸易雷达", "Jason 关于 作者 观点", "about/jason.html", "关于《全球贸易雷达》主理人 Jason 与网站使命。"]
+    ["关于JZ｜全球贸易雷达", "JZ 关于 作者 观点", "about/jason.html", "关于《全球贸易雷达》主理人 JZ 与网站使命。"]
   ];
 
   /* ---------- 移动端导航 ---------- */

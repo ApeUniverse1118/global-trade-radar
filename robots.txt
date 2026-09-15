@@ -3,6 +3,5 @@
 User-agent: *
 Allow: /
 
-# ⚠️ 部署前必做：将下方地址替换为你实际的 GitHub Pages 地址
-# 例如：Sitemap: https://your-username.github.io/global-trade-radar/sitemap.xml
-Sitemap: https://YOUR-GITHUB-USERNAME.github.io/global-trade-radar/sitemap.xml
+# 已配置 GitHub Pages 地址；若日后绑定自定义域名，请同步更新下方 Sitemap 地址
+Sitemap: https://apeuniverse1118.github.io/global-trade-radar/sitemap.xml

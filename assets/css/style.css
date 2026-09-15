@@ -308,3 +308,20 @@ tbody tr:nth-child(even) td{background:#f8fafc;}
   .report-list,.market-map{grid-template-columns:1fr;}
   .home-hero{padding:44px 0 40px;}
 }
+
+
+/* ============ 二维码卡片（咨询 / 打赏） ============ */
+.qr-grid{display:flex;flex-wrap:wrap;gap:18px;justify-content:center;}
+.qr-card{flex:1 1 240px;max-width:280px;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 16px;text-align:center;box-shadow:var(--shadow);}
+.qr-card img{width:100%;max-width:190px;height:auto;border-radius:10px;display:block;margin:0 auto 12px;border:1px solid var(--line);}
+.qr-card h3{font-size:15px;margin:0 0 6px;color:var(--ink);}
+.qr-card p{font-size:12.5px;color:var(--muted);margin:0;line-height:1.7;}
+.qr-mini{display:flex;gap:28px;justify-content:center;flex-wrap:wrap;margin-top:16px;padding-top:14px;border-top:1px dashed var(--line);}
+.qr-mini .item{text-align:center;color:var(--muted);font-size:12.5px;line-height:1.5;}
+.qr-mini .item img{width:112px;height:auto;border-radius:10px;display:block;margin:0 auto 6px;border:1px solid var(--line);background:#fff;}
+@media(max-width:600px){
+  .qr-card{flex:1 1 100%;max-width:100%;}
+  .qr-card img{max-width:200px;}
+  .qr-mini{gap:18px;}
+  .qr-mini .item img{width:104px;}
+}

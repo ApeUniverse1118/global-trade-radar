@@ -12,12 +12,12 @@
 
 | 栏目 | 说明 | 路径 |
 | --- | --- | --- |
-| 🏠 首页 | Hero + 最新日报 + 市场地图 + 行业机会 + Jason观点 | `index.html` |
+| 🏠 首页 | Hero + 最新日报 + 市场地图 + 行业机会 + JZ观点 | `index.html` |
 | 📰 每日雷达 | 历史日报归档，每日一期，覆盖近72小时关键事件 | `daily/` |
 | 🗺️ 市场分析 | 英国 / 欧盟 / 美国 三大市场深度分析页 | `markets/` |
 | 🏭 行业机会 | 家电 / 户外 / 汽车用品 / 消费品 / 跨境电商 / 物流 | `industries/` |
 | 📚 出海知识库 | 贸易政策 / 消费趋势 / 合规清单 / 消费文化 | `knowledge/` |
-| 🎙️ 关于Jason | 主理人个人IP页 | `about/jason.html` |
+| 🎙️ 关于JZ | 主理人个人IP页 | `about/jason.html` |
 | 🔍 站内搜索 | 全站页面索引搜索（无后端） | `assets/js/main.js` |
 
 **技术特点**
@@ -56,7 +56,7 @@ global-trade-radar/
 │   ├── compliance.html         # 出海合规
 │   └── culture.html            # 消费文化
 ├── about/
-│   └── jason.html              # 关于Jason
+│   └── jason.html              # 关于JZ
 ├── assets/
 │   ├── css/style.css           # 全站统一设计系统
 │   ├── js/main.js              # 导航/搜索/返回顶部（含页面搜索索引）
@@ -102,8 +102,8 @@ python -m http.server 8080
    - 到域名服务商添加一条 **CNAME 记录**：主机记录填子域名（或 `@`），指向 `<你的用户名>.github.io`；
    - 等待 DNS 生效后，勾选 `Enforce HTTPS`（GitHub 会自动签发证书）；
 6. **部署后必做（重要）**：
-   - 将 `sitemap.xml` 和 `robots.txt` 中的占位域名 `YOUR-GITHUB-USERNAME` 替换为你的真实域名（自定义域名生效后，也可替换为自定义域名），再重新上传；
-   - 将 `about/jason.html` 与首页中的联系邮箱 `contact@example.com` 替换为真实联系方式；
+   - `sitemap.xml` 与 `robots.txt` 已配置为 `https://apeuniverse1118.github.io/global-trade-radar/`；若绑定自定义域名，请将其中域名统一替换为你的自定义域名后再上传；
+   - 全站联系邮箱已配置为 `137413108@qq.com`（页脚与关于页均已替换）；
    - 到 [百度搜索资源平台](https://ziyuan.baidu.com) 和 [Google Search Console](https://search.google.com/search-console) 提交站点并验证。
 
 ---
