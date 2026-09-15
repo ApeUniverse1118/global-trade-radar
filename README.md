@@ -65,6 +65,8 @@ global-trade-radar/
 ├── robots.txt                  # 爬虫规则
 ├── README.md                   # 本文件
 └── .gitignore
+
+> 说明：`input/`（原始历史日报）与 `workspace/`（本地工具/文档）为**本地保留目录**，已加入 `.gitignore`，不会被提交到 GitHub 仓库；仓库根目录即部署根目录。
 ```
 
 ---
@@ -95,8 +97,12 @@ python -m http.server 8080
 2. **上传全部文件**：将本目录下所有文件与文件夹（`index.html`、`daily/`、`markets/`、`assets/` 等）上传到仓库根目录（建议用 GitHub Desktop 或 `git push`）；
 3. **开启 Pages**：进入仓库 → `Settings` → `Pages` → `Build and deployment` → `Source` 选择 **Deploy from a branch** → 分支选择 **main** → 文件夹选择 **/ (root)** → `Save`；
 4. 等待 1-2 分钟，访问 `https://<你的用户名>.github.io/global-trade-radar/`；
-5. **部署后必做（重要）**：
-   - 将 `sitemap.xml` 和 `robots.txt` 中的占位域名 `YOUR-GITHUB-USERNAME` 替换为你的真实用户名，再重新上传；
+5. **（可选）绑定自定义域名**：
+   - 仓库 `Settings` → `Pages` → `Custom domain` 输入你的域名（如 `radar.example.com`）→ `Save`；
+   - 到域名服务商添加一条 **CNAME 记录**：主机记录填子域名（或 `@`），指向 `<你的用户名>.github.io`；
+   - 等待 DNS 生效后，勾选 `Enforce HTTPS`（GitHub 会自动签发证书）；
+6. **部署后必做（重要）**：
+   - 将 `sitemap.xml` 和 `robots.txt` 中的占位域名 `YOUR-GITHUB-USERNAME` 替换为你的真实域名（自定义域名生效后，也可替换为自定义域名），再重新上传；
    - 将 `about/jason.html` 与首页中的联系邮箱 `contact@example.com` 替换为真实联系方式；
    - 到 [百度搜索资源平台](https://ziyuan.baidu.com) 和 [Google Search Console](https://search.google.com/search-console) 提交站点并验证。
 

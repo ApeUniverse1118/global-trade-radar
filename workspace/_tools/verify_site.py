@@ -4,7 +4,7 @@ import os, re, sys
 from html.parser import HTMLParser
 from urllib.parse import urljoin, urlparse
 
-ROOT = r"D:\doubao-work-project\global-trade-radar\workspace\output"
+ROOT = r"D:\doubao-work-project\global-trade-radar"
 
 errors = []
 warnings = []
@@ -52,9 +52,11 @@ def resolve(base_dir, url):
     return norm(os.path.join(base_dir, p))
 
 def main():
-    # 1. 收集所有 html
+    # 1. 收集所有 html（排除非部署目录 input/ 与 workspace/）
+    SKIP_DIRS = {"input", "workspace", ".git"}
     html_files = []
-    for dirpath, _, files in os.walk(ROOT):
+    for dirpath, dirs, files in os.walk(ROOT):
+        dirs[:] = [d for d in dirs if d not in SKIP_DIRS]
         for f in files:
             if f.lower().endswith(".html"):
                 html_files.append(os.path.join(dirpath, f))
