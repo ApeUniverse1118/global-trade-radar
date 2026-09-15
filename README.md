@@ -96,13 +96,13 @@ python -m http.server 8080
 1. **创建 GitHub Repository**（如 `global-trade-radar`），设为 Public；
 2. **上传全部文件**：将本目录下所有文件与文件夹（`index.html`、`daily/`、`markets/`、`assets/` 等）上传到仓库根目录（建议用 GitHub Desktop 或 `git push`）；
 3. **开启 Pages**：进入仓库 → `Settings` → `Pages` → `Build and deployment` → `Source` 选择 **Deploy from a branch** → 分支选择 **main** → 文件夹选择 **/ (root)** → `Save`；
-4. 等待 1-2 分钟，访问 `https://<你的用户名>.github.io/global-trade-radar/`；
-5. **（可选）绑定自定义域名**：
-   - 仓库 `Settings` → `Pages` → `Custom domain` 输入你的域名（如 `radar.example.com`）→ `Save`；
-   - 到域名服务商添加一条 **CNAME 记录**：主机记录填子域名（或 `@`），指向 `<你的用户名>.github.io`；
+4. 等待 1-2 分钟，默认访问地址为 `https://apeuniverse1118.github.io/global-trade-radar/`（绑定域名后以 `https://globaltraderadar.cn/` 为准）；
+5. **绑定自定义域名 `globaltraderadar.cn`**（仓库根目录已自带 `CNAME` 文件，内容为 `globaltraderadar.cn`）：
+   - 仓库 `Settings` → `Pages` → `Custom domain` 填入 `globaltraderadar.cn` → `Save`；
+   - 到域名服务商配置 DNS：裸域（`@`）添加 **4 条 A 记录**指向 `185.199.108.153`、`185.199.109.153`、`185.199.110.153`、`185.199.111.153`；如需 `www.globaltraderadar.cn` 可加一条 CNAME 指向 `apeuniverse1118.github.io`；
    - 等待 DNS 生效后，勾选 `Enforce HTTPS`（GitHub 会自动签发证书）；
 6. **部署后必做（重要）**：
-   - `sitemap.xml` 与 `robots.txt` 已配置为 `https://apeuniverse1118.github.io/global-trade-radar/`；若绑定自定义域名，请将其中域名统一替换为你的自定义域名后再上传；
+   - `sitemap.xml`、`robots.txt`、全站 `<link rel="canonical">` 均已配置为 `https://globaltraderadar.cn/`，无需再改；
    - 全站联系邮箱已配置为 `137413108@qq.com`（页脚与关于页均已替换）；
    - 到 [百度搜索资源平台](https://ziyuan.baidu.com) 和 [Google Search Console](https://search.google.com/search-console) 提交站点并验证。
 

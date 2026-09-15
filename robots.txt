@@ -3,5 +3,5 @@
 User-agent: *
 Allow: /
 
-# 已配置 GitHub Pages 地址；若日后绑定自定义域名，请同步更新下方 Sitemap 地址
-Sitemap: https://apeuniverse1118.github.io/global-trade-radar/sitemap.xml
+# 正式域名：globaltraderadar.cn（GitHub Pages 绑定自定义域名 + 国内备案后均沿用）
+Sitemap: https://globaltraderadar.cn/sitemap.xml

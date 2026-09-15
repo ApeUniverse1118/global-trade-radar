@@ -133,12 +133,12 @@ def main():
         with open(sm, "r", encoding="utf-8") as fh:
             smc = fh.read()
         sm_locs = re.findall(r"<loc>(.*?)</loc>", smc)
-        # 提取 sitemap 中的相对路径（去掉占位域名前缀）
+        # 提取 sitemap 中的相对路径（按 URL path 解析，与域名无关）
         sm_paths = set()
         for loc in sm_locs:
-            m = re.search(r"global-trade-radar/(.+?\.html)", loc)
-            if m:
-                sm_paths.add(m.group(1))
+            pth = urlparse(loc).path.lstrip("/")
+            if pth:
+                sm_paths.add(pth)
         site_paths = set(os.path.relpath(h, ROOT).replace("\\", "/") for h in html_files)
         missing_in_sm = site_paths - sm_paths
         if missing_in_sm:
