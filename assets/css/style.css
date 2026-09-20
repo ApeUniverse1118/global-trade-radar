@@ -330,3 +330,9 @@ tbody tr:nth-child(even) td{background:#f8fafc;}
 /* Logo（SVG 品牌标） */
 .brand img.logo{height:30px;width:30px;display:block;flex:none;}
 .footer-logo{height:18px;width:18px;vertical-align:-4px;margin-right:6px;flex:none;}
+
+/* 原文外链（日报 Sources 可点击回溯） */
+a.src-link{color:var(--blue);text-decoration:underline;text-underline-offset:2px;word-break:break-all;}
+a.src-link:hover{color:var(--navy);}
+.factcheck-note{margin-top:10px;font-size:13px;color:var(--muted);}
+
