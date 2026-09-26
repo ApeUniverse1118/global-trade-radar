@@ -336,3 +336,17 @@ a.src-link{color:var(--blue);text-decoration:underline;text-underline-offset:2px
 a.src-link:hover{color:var(--navy);}
 .factcheck-note{margin-top:10px;font-size:13px;color:var(--muted);}
 
+
+/* ===== 日报页咨询转化区块（轻量、不干扰阅读、移动端自适应） ===== */
+.cta-band{display:flex;gap:20px;align-items:center;background:var(--gold-bg);border:1px solid #ecdfae;border-left:4px solid var(--gold);border-radius:var(--radius);padding:16px 20px;margin:28px 0 8px;}
+.cta-band .cta-text{flex:1;min-width:0;}
+.cta-band h3{font-size:16px;margin:0 0 6px;color:var(--ink);}
+.cta-band p{font-size:13.5px;color:var(--muted);margin:0;line-height:1.7;}
+.cta-band p a{color:var(--blue);font-weight:600;}
+.cta-band .cta-qr{text-align:center;flex-shrink:0;}
+.cta-band .cta-qr img{width:88px;height:auto;border-radius:8px;border:1px solid var(--line);background:#fff;display:block;margin:0 auto 4px;}
+.cta-band .cta-qr span{font-size:11px;color:var(--muted);white-space:nowrap;}
+@media(max-width:600px){
+  .cta-band{flex-direction:column;align-items:center;text-align:center;gap:12px;padding:18px 16px;}
+  .cta-band .cta-qr span{white-space:normal;}
+}
