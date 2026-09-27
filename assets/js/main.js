@@ -39,8 +39,65 @@
     ["出海合规清单｜全球贸易雷达", "合规 IOR VAT REACH GPSR UKCA 生态税", "knowledge/compliance.html", "IOR核查、VAT/IOSS、REACH、UKCA、GPSR与知识产权合规。"],
     ["欧美消费文化洞察｜全球贸易雷达", "文化 英国 欧盟 美国 消费心理", "knowledge/culture.html", "英国排队文化、欧盟环保身份、美国精明中产与四国性格。"],
     ["出海知识库索引｜全球贸易雷达", "知识库 政策 趋势 合规 文化", "knowledge/index.html", "出海知识库：政策、趋势、合规、文化四大主题。"],
+    ["贸易概念词典｜全球贸易雷达", "贸易词典 CBAM IOR de minimis 双反 301 337 处理费 GARAN 海外仓 外贸知识", "concepts/index.html", "把日报里的贸易黑话讲成人话：是什么、为什么和你有关、时间线与行动清单。"],
+    ["CBAM碳关税是什么｜全球贸易雷达", "CBAM 碳关税 碳边境调节 欧盟碳税 钢铁 铝 碳足迹", "concepts/cbam.html", "欧盟对进口产品按含碳量补收的碳税，2026年从只申报走向要交钱、扩到下游制品。"],
+    ["美国IOR进口商记录是什么｜全球贸易雷达", "IOR 进口商记录 Importer of Record CBP Form5106 美国清关 借号", "concepts/ior.html", "美国清关的法律责任人，9/18起CBP严查，借号、信息不实当场作废并追溯。"],
+    ["de minimis小包免税额度｜全球贸易雷达", "de minimis 小包免税 800美元 135英镑 直邮 低值包裹", "concepts/de-minimis.html", "英美欧同步取消/收紧低价小包免税，低价直邮模式红利结束。"],
+    ["反倾销反补贴双反是什么｜全球贸易雷达", "反倾销 反补贴 双反 AD CVD 惩罚性关税 贸易救济", "concepts/anti-dumping.html", "被认为卖太便宜或拿了补贴就加惩罚性关税，命中率高、还常追溯。"],
+    ["美国301条款与337调查｜全球贸易雷达", "301条款 337调查 美国关税 侵权禁售 知识产权", "concepts/section-301.html", "301是单方面加关税的大棒，337查侵权、可直接把产品挡在国门之外。"],
+    ["欧盟小包处理费是什么｜全球贸易雷达", "欧盟小包处理费 新海关法典 法定进口人 直邮成本 每件2欧", "concepts/eu-processing-fee.html", "进口小包每件多收约2欧、叠加3欧关税，平台被认定为法定进口人，每票固定成本约5欧。"],
+    ["GARAN标签与欧盟反漂绿｜全球贸易雷达", "GARAN 反漂绿 green claims 环保宣称 绿色 标签 欧盟合规", "concepts/garan.html", "9/27起写环保/绿色/碳中和必须有证据，禁止漂绿。"],
+    ["追溯征税是什么｜全球贸易雷达", "追溯征税 retroactive duty 反倾销追溯 现金保证金 反规避", "concepts/retro-duty.html", "今天的裁决能回头补几个月前已到港货的税，甚至收现金保证金。"],
+    ["本地仓与海外仓怎么选｜全球贸易雷达", "海外仓 本地仓 直邮 批量清关 一件代发 跨境物流", "concepts/local-warehouse.html", "爆款转海外仓批量清关摊薄成本，长尾继续直邮但别再低申报。"],
+    ["美国清关规费MPF是什么｜全球贸易雷达", "MPF HMF 货物处理费 美国清关费用 拖车费 到岸成本", "concepts/mpf.html", "美国清关按票收的固定处理费，跟货值挂钩、有上下限，报价别漏算。"],
+    ["英国能源价格上限与秋季预算｜全球贸易雷达", "英国能源价格上限 Energy Price Cap 秋季预算 Autumn Budget 家电消费", "concepts/uk-energy.html", "能源价格上限决定英国家庭开支，秋季预算是政府财政大动作。"],
+    ["中美对等降税与关税休战｜全球贸易雷达", "中美关税休战 对等降税 300亿美元 301豁免 贸易战", "concepts/us-china-truce.html", "分阶段、有清单、有截止日的停火，不是全面免税；共识不等于已生效。"],
     ["关于JZ｜全球贸易雷达", "JZ 关于 作者 观点", "about/jason.html", "关于《全球贸易雷达》主理人 JZ 与网站使命。"]
   ];
+
+  /* ---------- 自动渲染"最近日报"与更新日期 ----------
+     任何页面放 <div class="js-latest-dailies" data-limit="5"></div> 即可
+     自动从 SEARCH_INDEX 拉出最新日报卡片；
+     <span class="js-updated-date"></span> 自动写成最新一期日期。 */
+  function initLatestDailies() {
+    var boxes = document.querySelectorAll(".js-latest-dailies");
+    var upd = document.querySelector(".js-updated-date");
+    if (!boxes.length && !upd) return;
+
+    var here = location.pathname.replace(/\\/g, "/");
+    var parts = here.split("/").filter(Boolean);
+    var prefix = parts.length > 1 ? "../" : "";
+
+    var dailies = [];
+    for (var i = 0; i < SEARCH_INDEX.length; i++) {
+      var it = SEARCH_INDEX[i];
+      if (/^daily\/2026-\d{2}-\d{2}\.html$/.test(it[2])) dailies.push(it);
+    }
+    dailies.sort(function (a, b) { return a[2] < b[2] ? 1 : -1; });
+
+    boxes.forEach(function (box) {
+      var limit = parseInt(box.getAttribute("data-limit"), 10) || 5;
+      dailies.slice(0, limit).forEach(function (it) {
+        var date = it[2].replace("daily/", "").replace(".html", "");
+        var a = document.createElement("a");
+        a.className = "report-card";
+        a.href = prefix + it[2];
+        var badge = document.createElement("span");
+        badge.className = "date-badge";
+        badge.textContent = date;
+        var h3 = document.createElement("h3");
+        h3.textContent = it[0].replace(/\s*\d{4}-\d{2}-\d{2}$/, "");
+        var p = document.createElement("p");
+        p.textContent = it[3];
+        a.appendChild(badge); a.appendChild(h3); a.appendChild(p);
+        box.appendChild(a);
+      });
+    });
+
+    if (upd && dailies.length) {
+      upd.textContent = "数据更新：" + dailies[0][2].replace("daily/", "").replace(".html", "");
+    }
+  }
 
   /* ---------- 移动端导航 ---------- */
   function initNav() {
@@ -124,6 +181,7 @@
 
   initNav();
   initSearch();
+  initLatestDailies();
   initToTop();
   initYear();
 })();

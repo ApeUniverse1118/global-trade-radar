@@ -209,6 +209,26 @@
     <priority>0.7</priority>
   </url>
 
+  <!-- 贸易概念词典 -->
+  <url>
+    <loc>https://globaltraderadar.cn/concepts/index.html</loc>
+    <lastmod>2026-09-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url><loc>https://globaltraderadar.cn/concepts/cbam.html</loc><lastmod>2026-09-27</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://globaltraderadar.cn/concepts/ior.html</loc><lastmod>2026-09-27</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://globaltraderadar.cn/concepts/de-minimis.html</loc><lastmod>2026-09-27</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://globaltraderadar.cn/concepts/anti-dumping.html</loc><lastmod>2026-09-27</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://globaltraderadar.cn/concepts/section-301.html</loc><lastmod>2026-09-27</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://globaltraderadar.cn/concepts/eu-processing-fee.html</loc><lastmod>2026-09-27</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://globaltraderadar.cn/concepts/garan.html</loc><lastmod>2026-09-27</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://globaltraderadar.cn/concepts/retro-duty.html</loc><lastmod>2026-09-27</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://globaltraderadar.cn/concepts/local-warehouse.html</loc><lastmod>2026-09-27</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://globaltraderadar.cn/concepts/mpf.html</loc><lastmod>2026-09-27</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://globaltraderadar.cn/concepts/uk-energy.html</loc><lastmod>2026-09-27</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://globaltraderadar.cn/concepts/us-china-truce.html</loc><lastmod>2026-09-27</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+
   <!-- 关于 -->
   <url>
     <loc>https://globaltraderadar.cn/about/jason.html</loc>
