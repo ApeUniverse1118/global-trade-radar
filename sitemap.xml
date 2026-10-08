@@ -14,6 +14,12 @@
 
   <!-- 每日雷达 -->
   <url>
+    <loc>https://globaltraderadar.cn/daily/2026-10-07.html</loc>
+    <lastmod>2026-10-08</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://globaltraderadar.cn/daily/2026-10-01.html</loc>
     <lastmod>2026-10-02</lastmod>
     <changefreq>daily</changefreq>
@@ -236,7 +242,7 @@
   </url>
   <url><loc>https://globaltraderadar.cn/concepts/cbam.html</loc><lastmod>2026-09-27</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <url><loc>https://globaltraderadar.cn/concepts/ior.html</loc><lastmod>2026-09-27</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://globaltraderadar.cn/concepts/de-minimis.html</loc><lastmod>2026-09-27</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://globaltraderadar.cn/concepts/de-minimis.html</loc><lastmod>2026-10-08</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <url><loc>https://globaltraderadar.cn/concepts/anti-dumping.html</loc><lastmod>2026-09-27</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <url><loc>https://globaltraderadar.cn/concepts/section-301.html</loc><lastmod>2026-09-27</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <url><loc>https://globaltraderadar.cn/concepts/eu-processing-fee.html</loc><lastmod>2026-09-27</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
@@ -252,6 +258,8 @@
   <url><loc>https://globaltraderadar.cn/concepts/customs-registration.html</loc><lastmod>2026-09-30</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <url><loc>https://globaltraderadar.cn/concepts/sunset-review.html</loc><lastmod>2026-10-02</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <url><loc>https://globaltraderadar.cn/concepts/aci.html</loc><lastmod>2026-10-02</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://globaltraderadar.cn/concepts/mixed-duty.html</loc><lastmod>2026-10-08</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://globaltraderadar.cn/concepts/dpp.html</loc><lastmod>2026-10-08</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
 
   <!-- 关于 -->
   <url>
