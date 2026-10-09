@@ -303,6 +303,20 @@
   <url><loc>https://globaltraderadar.cn/concepts/ver.html</loc><lastmod>2026-10-09</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <url><loc>https://globaltraderadar.cn/concepts/declaration-line.html</loc><lastmod>2026-10-09</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
 
+  <!-- 跨境商机雷达 -->
+  <url>
+    <loc>https://globaltraderadar.cn/opportunities/index.html</loc>
+    <lastmod>2026-10-09</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://globaltraderadar.cn/opportunities/2026-10-09.html</loc>
+    <lastmod>2026-10-09</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+  </url>
+
   <!-- 关于 -->
   <url>
     <loc>https://globaltraderadar.cn/about/jason.html</loc>
